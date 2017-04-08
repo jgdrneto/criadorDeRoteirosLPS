@@ -13,7 +13,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import eventos.Comer;
+import eventos.Alimentacao;
 import eventos.Evento;
 import eventos.Evento.QUALIDADE;
 
@@ -41,24 +41,24 @@ public class ESArquivosJSON {
 	}	
 	
 	private Evento convertJsonOBJParaEvento(JSONObject obj) {
-		
+				
 		Map<String,Object> valores = Evento.obterValoresApartirDoJSON(obj);
 
 		switch(valores.get(Evento.TIPO).toString()){
-			case "Comer":
+			case "Alimentacao":
+			case "Descanso":
 				
-				Integer quali = Integer.valueOf(obj.get(Comer.QUALIDADE).toString());
+				Integer quali = Integer.valueOf(obj.get(Alimentacao.QUALIDADE).toString());
 				
 				QUALIDADE q = QUALIDADE.values()[quali];
 				
-				return new Comer((String)valores.get(Evento.NOME),
+				return new Alimentacao((String)valores.get(Evento.NOME),
 								 (String)valores.get(Evento.DESCRICAO),
 								 (String)valores.get(Evento.LOCAL),
 								 (double)valores.get(Evento.PRECO),
 								 (GregorianCalendar)valores.get(Evento.HORADEINICIO),
 								 (GregorianCalendar)valores.get(Evento.HORADETERMINO),
 								 q);
-								 
 			default:
 				return null;
 		}

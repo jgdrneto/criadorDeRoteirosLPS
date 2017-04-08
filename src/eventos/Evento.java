@@ -33,6 +33,10 @@ public abstract class Evento {
 	private GregorianCalendar horarioInicio;
 	private GregorianCalendar horarioTermino;
 	
+	public Evento(){
+		
+	}
+	
 	public Evento(String nome,String tipo, String descricao, String local, double preco, GregorianCalendar horarioInicio, GregorianCalendar horarioTermino) {
 		
 		if(horarioInicio.after(horarioTermino)){
@@ -115,8 +119,8 @@ public abstract class Evento {
 		result+="Descrição: "+ this.getDescricao()+"\n";
 		result+="Local: "+ this.getLocal()+"\n";
 		result+="Preço: " + this.getPreco()+"\n";
-		result+="Data de início:"+ this.getHorarioInicio().get(Calendar.DAY_OF_MONTH)+"/"+(this.getHorarioInicio().get(Calendar.MONTH)+1)+"/"+this.getHorarioInicio().get(Calendar.YEAR)+ " HORA: "+ this.getHorarioInicio().get(Calendar.HOUR_OF_DAY)+":"+this.getHorarioInicio().get(Calendar.MINUTE)+"\n";
-		result+="Data de Término:"+ this.getHorarioTermino().get(Calendar.DAY_OF_MONTH)+"/"+(this.getHorarioTermino().get(Calendar.MONTH)+1)+"/"+this.getHorarioTermino().get(Calendar.YEAR)+ " HORA: "+ this.getHorarioTermino().get(Calendar.HOUR_OF_DAY)+":"+this.getHorarioTermino().get(Calendar.MINUTE)+"\n";
+		result+="Data de início: "+ this.getHorarioInicio().get(Calendar.DAY_OF_MONTH)+"/"+(this.getHorarioInicio().get(Calendar.MONTH)+1)+"/"+this.getHorarioInicio().get(Calendar.YEAR)+ " HORA: "+ this.getHorarioInicio().get(Calendar.HOUR_OF_DAY)+":"+this.getHorarioInicio().get(Calendar.MINUTE)+"\n";
+		result+="Data de Término: "+ this.getHorarioTermino().get(Calendar.DAY_OF_MONTH)+"/"+(this.getHorarioTermino().get(Calendar.MONTH)+1)+"/"+this.getHorarioTermino().get(Calendar.YEAR)+ " HORA: "+ this.getHorarioTermino().get(Calendar.HOUR_OF_DAY)+":"+this.getHorarioTermino().get(Calendar.MINUTE)+"\n";
 	
 		return result;
 	}

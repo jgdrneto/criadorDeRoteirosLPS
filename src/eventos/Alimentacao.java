@@ -5,13 +5,13 @@ import java.util.Map;
 
 import org.json.simple.JSONObject;
 
-public class Comer extends Evento{
+public class Alimentacao extends Evento{
 	
 	private QUALIDADE qualidade;
-
-	public Comer(String nome, String descricao, String local, double preco, GregorianCalendar horarioInicio,
+	
+	public Alimentacao(String nome, String descricao, String local, double preco, GregorianCalendar horarioInicio,
 			GregorianCalendar horarioTermino, QUALIDADE qualidade) {
-		super(nome,Comer.class.getSimpleName(), descricao, local, preco, horarioInicio, horarioTermino);
+		super(nome,Alimentacao.class.getSimpleName(), descricao, local, preco, horarioInicio, horarioTermino);
 		this.qualidade = qualidade;
 	}
 
