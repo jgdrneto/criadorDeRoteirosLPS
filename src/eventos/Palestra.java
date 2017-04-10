@@ -9,7 +9,7 @@ public class Palestra extends Evento{
 	String palestrante;
 	
 	public Palestra(String nome, String descricao, String local, double preco, GregorianCalendar horarioInicio, GregorianCalendar horarioTermino, String palestrante) {
-		super(nome,Palestra.class.getName(), descricao, local, preco, horarioInicio, horarioTermino);
+		super(nome,Palestra.class.getSimpleName(), descricao, local, preco, horarioInicio, horarioTermino);
 		this.palestrante = palestrante;
 	}
 

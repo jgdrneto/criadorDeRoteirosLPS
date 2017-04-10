@@ -14,8 +14,14 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import eventos.Alimentacao;
+import eventos.Descanso;
 import eventos.Evento;
 import eventos.Evento.QUALIDADE;
+import eventos.Exposicao;
+import eventos.Intervalo;
+import eventos.Lazer;
+import eventos.Palestra;
+import eventos.Turismo;
 
 public class ESArquivosJSON {
 	
@@ -46,11 +52,10 @@ public class ESArquivosJSON {
 
 		switch(valores.get(Evento.TIPO).toString()){
 			case "Alimentacao":
-			case "Descanso":
 				
-				Integer quali = Integer.valueOf(obj.get(Alimentacao.QUALIDADE).toString());
+				Integer qualA = Integer.valueOf(obj.get(Alimentacao.QUALIDADE).toString());
 				
-				QUALIDADE q = QUALIDADE.values()[quali];
+				QUALIDADE qA = QUALIDADE.values()[qualA];
 				
 				return new Alimentacao((String)valores.get(Evento.NOME),
 								 (String)valores.get(Evento.DESCRICAO),
@@ -58,7 +63,58 @@ public class ESArquivosJSON {
 								 (double)valores.get(Evento.PRECO),
 								 (GregorianCalendar)valores.get(Evento.HORADEINICIO),
 								 (GregorianCalendar)valores.get(Evento.HORADETERMINO),
-								 q);
+								 qA);
+			case "Descanso":
+				
+				Integer qualD = Integer.valueOf(obj.get(Alimentacao.QUALIDADE).toString());
+				
+				QUALIDADE qD = QUALIDADE.values()[qualD];
+				
+				return new Descanso((String)valores.get(Evento.NOME),
+								 (String)valores.get(Evento.DESCRICAO),
+								 (String)valores.get(Evento.LOCAL),
+								 (double)valores.get(Evento.PRECO),
+								 (GregorianCalendar)valores.get(Evento.HORADEINICIO),
+								 (GregorianCalendar)valores.get(Evento.HORADETERMINO),
+								 qD);
+				
+			case "Exposicao" :
+				return new Exposicao((String)valores.get(Evento.NOME),
+						 (String)valores.get(Evento.DESCRICAO),
+						 (String)valores.get(Evento.LOCAL),
+						 (double)valores.get(Evento.PRECO),
+						 (GregorianCalendar)valores.get(Evento.HORADEINICIO),
+						 (GregorianCalendar)valores.get(Evento.HORADETERMINO),
+						 (String)valores.get("Autor"));
+			case "Intervalo" :
+				return new Intervalo((String)valores.get(Evento.NOME),
+						 (String)valores.get(Evento.DESCRICAO),
+						 (String)valores.get(Evento.LOCAL),
+						 (double)valores.get(Evento.PRECO),
+						 (GregorianCalendar)valores.get(Evento.HORADEINICIO),
+						 (GregorianCalendar)valores.get(Evento.HORADETERMINO));
+			case "Lazer" :
+				return new Lazer((String)valores.get(Evento.NOME),
+						 (String)valores.get(Evento.DESCRICAO),
+						 (String)valores.get(Evento.LOCAL),
+						 (double)valores.get(Evento.PRECO),
+						 (GregorianCalendar)valores.get(Evento.HORADEINICIO),
+						 (GregorianCalendar)valores.get(Evento.HORADETERMINO));
+			case "Palestra" :
+				return new Palestra((String)valores.get(Evento.NOME),
+						 (String)valores.get(Evento.DESCRICAO),
+						 (String)valores.get(Evento.LOCAL),
+						 (double)valores.get(Evento.PRECO),
+						 (GregorianCalendar)valores.get(Evento.HORADEINICIO),
+						 (GregorianCalendar)valores.get(Evento.HORADETERMINO),
+						 (String)valores.get("Palestrante"));
+			case "Turismo" :
+				return new Turismo((String)valores.get(Evento.NOME),
+						 (String)valores.get(Evento.DESCRICAO),
+						 (String)valores.get(Evento.LOCAL),
+						 (double)valores.get(Evento.PRECO),
+						 (GregorianCalendar)valores.get(Evento.HORADEINICIO),
+						 (GregorianCalendar)valores.get(Evento.HORADETERMINO));
 			default:
 				return null;
 		}

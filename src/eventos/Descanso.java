@@ -9,7 +9,7 @@ public class Descanso extends Evento{
 	private QUALIDADE qualidade;
 	
 	public Descanso(String nome, String descricao, String local, double preco, GregorianCalendar horarioInicio, GregorianCalendar horarioTermino, QUALIDADE qualidade) {
-		super(nome,Descanso.class.getName(), descricao, local, preco, horarioInicio, horarioTermino);
+		super(nome,Descanso.class.getSimpleName(), descricao, local, preco, horarioInicio, horarioTermino);
 		this.qualidade = qualidade;
 	}
 

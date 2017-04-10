@@ -10,7 +10,7 @@ public class Exposicao extends Evento{
 	private String autor;
 
 	public Exposicao(String nome, String descricao, String local, double preco, GregorianCalendar horarioInicio, GregorianCalendar horarioTermino, String autor) {
-		super(nome,Exposicao.class.getName(), descricao, local, preco, horarioInicio, horarioTermino);
+		super(nome,Exposicao.class.getSimpleName(), descricao, local, preco, horarioInicio, horarioTermino);
 		this.autor = autor;
 	}
 

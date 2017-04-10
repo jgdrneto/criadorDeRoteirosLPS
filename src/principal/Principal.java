@@ -37,16 +37,19 @@ public class Principal {
 		Alimentacao a8 = new Alimentacao("Restaurante Rei do gado", "Restaurante com o melhor da carne bovina", "BR 101", 50, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
 		Alimentacao a9 = new Alimentacao("Restaurante Bom ponto", "Restaurante com um excelente local de acesso", "BR 101", 40, new GregorianCalendar(2017, Calendar.MARCH, 10, 13, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 15, 0), QUALIDADE.BOA);
 		Alimentacao a10 = new Alimentacao("Restaurante do Buffalo Bill", "Restaurante especializado em comida de buffalo", "BR 101", 150, new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 15, 0), QUALIDADE.EXCELENTE);
+		
+		Descanso d1 = new Descanso("Hotel sono bom", "Hotel para sono top", "Rua do Malte", 80, new GregorianCalendar(2017, Calendar.MARCH, 10, 22, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 23, 0), QUALIDADE.MEDIA);
 		/*
-		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
-		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
-		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
-		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
-		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
-		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
-		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
-		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
-		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
+		Descanso d2 = new Descanso("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
+		Descanso d4 = new Descanso("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
+		Descanso d5 = new Descanso("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
+		Descanso d6 = new Descanso("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
+		Descanso d7 = new Descanso("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
+		Descanso d8 = new Descanso("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
+		Descanso d9 = new Descanso("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
+		*/
+		/*
+		Alimentacao d10 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
 		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
 		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
 		Alimentacao c3 = new Alimentacao("Restaurante do Guiné", "Restaurante com comida caseira do sertão", "BR 101", 75, new GregorianCalendar(2017, Calendar.MARCH, 10, 11, 0), new GregorianCalendar(2017, Calendar.MARCH, 10, 14, 0), QUALIDADE.MEDIA);
@@ -77,6 +80,7 @@ public class Principal {
 		eventos.add(a8.converterParaJSON());
 		eventos.add(a9.converterParaJSON());
 		eventos.add(a10.converterParaJSON());
+		eventos.add(d1.converterParaJSON());
 		
 		List<Preferencia> preferencias = new ArrayList<Preferencia>();
 		
@@ -87,6 +91,7 @@ public class Principal {
 		
 		List<Class <? extends Evento>> classes = new ArrayList<Class <? extends Evento>>();
 		classes.add(Alimentacao.class);
+		classes.add(Descanso.class);
 		
 		try {
 			ESArquivosJSON manipulador = new ESArquivosJSON();
@@ -102,6 +107,7 @@ public class Principal {
 			List<Evento> roteiro = construtor.getRoteiro(eAleatoria); 
 			
 			List<List<Evento>> matrizRoteiro = construtor.selecionarRoteirosPossiveis();
+			
 			/*
 			for(List<Evento>lme : matrizRoteiro){
 				for(Evento ev : lme){
@@ -113,14 +119,11 @@ public class Principal {
 			*/
 			
 			for(Evento e : roteiro){
-				if(e instanceof Alimentacao){
-					
-					Alimentacao c = (Alimentacao)e;
-					
-					System.out.println(c.toString());
-					
-					System.out.println("=========================================================\n");
-				}
+				
+				System.out.println(e.toString());
+						
+				System.out.println("=========================================================\n");
+				
 			}
 			
 		} catch (IOException e) {
