@@ -13,7 +13,6 @@ import construtor.ConstrutorDeRoteiro;
 import construtor.ESArquivosJSON;
 import construtor.Preferencia;
 import construtor.Preferencia.RANKING;
-import estrategiasDeEscolha.EstrategiaAleatoria;
 import estrategiasDeEscolha.EstrategiaDeEscolha;
 import estrategiasDeEscolha.EstrategiaPorMenorPreco;
 import eventos.Alimentacao;

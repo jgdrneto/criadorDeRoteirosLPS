@@ -34,6 +34,12 @@
 						<feature mandatory="true" name="Nao_Usar"/>
 						<feature mandatory="true" name="Usar"/>
 					</or>
+					<or mandatory="true" name="Estrategia">
+						<feature mandatory="true" name="MenorPreco"/>
+						<feature mandatory="true" name="Aleatoria"/>
+						<feature mandatory="true" name="Preferencias"/>
+						<feature mandatory="true" name="PrefernciasEMenorPreco"/>
+					</or>
 				</and>
 				<feature name="Visualizar_Roteiro"/>
 			</and>
