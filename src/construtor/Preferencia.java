@@ -1,24 +1,20 @@
 package construtor;
 
+import java.util.GregorianCalendar;
+
 import eventos.Evento;
 
 public class Preferencia implements Comparable<Preferencia>{
 	
-	public enum RANKING{
-		SEM_RANKING,
-		UM,
-		DOIS,
-		TRES,
-		QUATRO,
-		CINCO
-	}
+	private Class<? extends Evento> classe;
+	private GregorianCalendar inicio;
+	private GregorianCalendar fim;
 	
-	Class<? extends Evento> classe;
-	RANKING rk;
 	
-	public Preferencia(Class<? extends Evento> classe, RANKING rk) {
+	public Preferencia(Class<? extends Evento> classe, int horaInicio, int minInicio, int horaFim, int minFim) {
 		this.classe = classe;
-		this.rk = rk;
+		this.inicio = new GregorianCalendar(0,0, 0, horaInicio, minInicio);
+		this.fim = new GregorianCalendar(0,0, 0, horaFim, minFim);
 	}
 
 	public Class<? extends Evento> getClasse() {
@@ -29,21 +25,29 @@ public class Preferencia implements Comparable<Preferencia>{
 		this.classe = classe;
 	}
 
-	public RANKING getRk() {
-		return rk;
+	public GregorianCalendar getInicio() {
+		return inicio;
 	}
 
-	public void setRk(RANKING rk) {
-		this.rk = rk;
+	public void setInicio(GregorianCalendar inicio) {
+		this.inicio = inicio;
+	}
+
+	public GregorianCalendar getFim() {
+		return fim;
+	}
+
+	public void setFim(GregorianCalendar fim) {
+		this.fim = fim;
 	}
 
 	@Override
 	public int compareTo(Preferencia pref) {
 		
-		if(this.getRk().ordinal()>pref.getRk().ordinal()){
+		if(inicio.getTimeInMillis()>fim.getTimeInMillis()){
 			return -1;
 		}else{
-			if(this.getRk().ordinal()<pref.getRk().ordinal()){
+			if(inicio.getTimeInMillis()<fim.getTimeInMillis()){
 				return 1;
 			}else{
 				return 0;
