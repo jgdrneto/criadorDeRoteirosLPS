@@ -95,6 +95,7 @@ public class Principal {
 		List<Preferencia> preferencias = new ArrayList<Preferencia>();
 		
 		preferencias.add(new Preferencia(Alimentacao.class,12,0,14,0));
+		//preferencias.add(new Preferencia(Alimentacao.class,12,0,14,0));
 		//preferencias.add(new Preferencia(Descanso.class,RANKING.DOIS));
 		//preferencias.add(new Preferencia(Exposicao.class,RANKING.DOIS));
 		
@@ -113,8 +114,8 @@ public class Principal {
 			ConstrutorDeRoteiro construtor = new ConstrutorDeRoteiro(le, classes, preferencias, 2017, Calendar.MARCH, 10,7);
 			
 			//EstrategiaDeEscolha estrategia = new EstrategiaAleatoria();
-			//EstrategiaDeEscolha estrategia = new EstrategiaPorMenorPreco();
-			EstrategiaDeEscolha estrategia = new EstrategiaComPreferencia();
+			EstrategiaDeEscolha estrategia = new EstrategiaPorMenorPreco();
+			//EstrategiaDeEscolha estrategia = new EstrategiaComPreferencia();
 			
 			List<Evento> roteiro = construtor.getRoteiro(estrategia);
 			
@@ -130,13 +131,20 @@ public class Principal {
 			}
 			*/
 			
+			JSONArray roteiroSalvo = new JSONArray();
+			
 			for(Evento e : roteiro){
 				
 				System.out.println(e.toString());
-						
+				
+				roteiroSalvo.add(e.converterParaJSON());
+				
 				System.out.println("=========================================================\n");
 				
 			}
+			
+			//Gravando o roteiro
+			manipulador.escritor("roteiro.json", roteiroSalvo);
 			
 		} catch (IOException e) {
 			System.out.println("ERRO AO ESCREVER EM ARQUIVO");

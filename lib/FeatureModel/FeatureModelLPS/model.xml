@@ -8,15 +8,7 @@
 					<feature abstract="true" mandatory="true" name="EscreverJSON"/>
 				</and>
 				<and name="Cadastrar_Preferencias">
-					<and abstract="true" name="Evento">
-						<alt mandatory="true" name="Ranking">
-							<feature mandatory="true" name="R1"/>
-							<feature mandatory="true" name="R2"/>
-							<feature mandatory="true" name="R3"/>
-							<feature mandatory="true" name="R4"/>
-							<feature mandatory="true" name="R5"/>
-						</alt>
-					</and>
+					<feature abstract="true" name="Evento"/>
 				</and>
 				<and mandatory="true" name="Gerar_Roteiro">
 					<feature mandatory="true" name="Intervalo"/>
